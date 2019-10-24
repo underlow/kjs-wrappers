@@ -1,0 +1,28 @@
+plugins {
+    id 'org.jetbrains.kotlin.js'
+}
+repositories {
+    mavenLocal()
+    jcenter()
+    maven { url "https://dl.bintray.com/kotlin/kotlin-js-wrappers" }
+    maven { url "https://dl.bintray.com/kotlin/kotlinx" }
+    mavenCentral()
+}
+
+kotlin {
+    target {
+        useCommonJs()
+    }
+
+    sourceSets {
+        main {
+            dependencies {
+                implementation "org.jetbrains:kotlin-react:$wrapper_react_version"
+            }
+        }
+        test {
+            dependencies {
+            }
+        }
+    }
+}
