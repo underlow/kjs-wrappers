@@ -1,4 +1,5 @@
 @file:JsModule("react-google-login")
+@file:Suppress("unused")
 
 package me.underlow.reactgooglelogin
 
