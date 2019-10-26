@@ -1,0 +1,5 @@
+rootProject.name = 'kjs-wrappers'
+
+include 'kotlin-js-helpers'
+include 'react-google-login-wrapper'
+

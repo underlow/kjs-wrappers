@@ -1,0 +1,32 @@
+buildscript {
+
+    ext {
+        kotlin_version = '1.3.50'
+        wrapper_react_version='16.6.0-pre.76-kotlin-1.3.40'
+    }
+
+    repositories {
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+        maven { url 'https://maven.google.com' }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+    }
+
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.js' version '1.3.50'
+}
+
+
+
+group 'me.underlow'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
