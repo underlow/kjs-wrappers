@@ -27,3 +27,5 @@ hs_err_pid*
 /kotlin-js-helpers/build/
 /react-google-login-wrapper/build/
 !/gradle/wrapper/gradle-wrapper.jar
+/gradle-local.properties
+/build/

@@ -18,3 +18,14 @@ dependencies {
 	        implementation 'com.github.underlow.kjs-wrappers:module_name:Tag'
 	}
 ```
+
+
+## Publish artifact 
+
+Cannot get working bintray + kotlin multiplatform so github registry only
+
+create `gradle-local.properties` file:
+```
+gpr.user=<user>
+gpr.key=<key>
+```
