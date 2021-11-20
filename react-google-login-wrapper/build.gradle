@@ -4,9 +4,7 @@ plugins {
 }
 repositories {
     mavenLocal()
-    jcenter()
-    maven { url "https://dl.bintray.com/kotlin/kotlin-js-wrappers" }
-    maven { url "https://dl.bintray.com/kotlin/kotlinx" }
+    maven { url = uri("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven") }
     mavenCentral()
 }
 
@@ -32,7 +30,7 @@ kotlin {
             dependencies {
                 implementation(project(':kotlin-js-helpers'))
 
-                implementation "org.jetbrains:kotlin-react:$wrapper_react_version"
+                implementation "org.jetbrains.kotlin-wrappers:kotlin-react:$wrapper_react_version"
             }
         }
 

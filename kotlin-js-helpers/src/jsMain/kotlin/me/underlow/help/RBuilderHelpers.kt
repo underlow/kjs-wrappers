@@ -3,8 +3,9 @@
 package me.underlow.help
 
 import kotlinext.js.jsObject
+import react.Component
+import react.Props
 import react.RBuilder
-import react.RProps
 
 /**
  * Helper function to support simplified syntax:
@@ -26,9 +27,10 @@ import react.RProps
  *   }
  *
  */
-inline fun <P : RProps> RBuilder.buildWithProperties(crossinline builder: P.() -> Unit) =
-    child(this, jsObject<P> {}) {
-        this.attrs {
-            builder.invoke(this)
-        }
+inline fun < T : Props, reified C : Component<T, *>> RBuilder.buildWithProperties(
+    crossinline builder: T.() -> Unit) = child(C::class) {
+
+    this.attrs {
+        builder.invoke(this)
     }
+}
