@@ -3,12 +3,12 @@
 
 package me.underlow.reactgooglelogin
 
-import react.FunctionComponent
+import react.ComponentClass
 import react.Props
 import react.ReactElement
 
-external val GoogleLogin: FunctionComponent<GoogleLoginProps>
-external val GoogleLogout: FunctionComponent<GoogleLogoutProps>
+external val GoogleLogin: ComponentClass<GoogleLoginProps>
+external val GoogleLogout: ComponentClass<GoogleLogoutProps>
 
 external interface GoogleLoginProps : Props {
     var onSuccess: (GoogleUser) -> Unit
@@ -18,14 +18,14 @@ external interface GoogleLoginProps : Props {
     var redirectUri: String
     var jsSrc: String
     var uxMode: String // popup| redirect
-    var render: (GoogleLoginProps) -> ReactElement
+    var render: (GoogleLoginProps) -> ReactElement<Props>
     var onClick: () -> Unit
 }
 
 external interface GoogleLogoutProps : Props {
     var buttonText: String
     var onLogoutSuccess: () -> Unit
-    var render: (GoogleLogoutRenderProps) -> ReactElement?
+    var render: (GoogleLogoutRenderProps) -> ReactElement<Props>?
 }
 
 external interface GoogleLogoutRenderProps : Props {

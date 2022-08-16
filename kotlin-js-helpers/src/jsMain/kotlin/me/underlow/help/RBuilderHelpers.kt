@@ -2,10 +2,9 @@
 
 package me.underlow.help
 
-import kotlinext.js.jsObject
+import react.ChildrenBuilder
 import react.Component
 import react.Props
-import react.RBuilder
 
 /**
  * Helper function to support simplified syntax:
@@ -27,10 +26,13 @@ import react.RBuilder
  *   }
  *
  */
-inline fun < T : Props, reified C : Component<T, *>> RBuilder.buildWithProperties(
-    crossinline builder: T.() -> Unit) = child(C::class) {
 
-    this.attrs {
-        builder.invoke(this)
-    }
-}
+// it's not required with latest () version of kotlin-react
+
+//inline fun < T : Props, reified C : Component<T, *>> ChildrenBuilder.buildWithProperties(
+//    crossinline builder: T.(18.2.0-pre.369) -> Unit) = child(C::class) {
+//
+//    this.attrs {
+//        builder.invoke(this)
+//    }
+//}

@@ -2,12 +2,6 @@
 
 package me.underlow.reactgooglelogin
 
-import me.underlow.help.buildWithProperties
-import react.RBuilder
-
-fun RBuilder.googleLogin(block: GoogleLoginProps.() -> Unit) = buildWithProperties(block)
-fun RBuilder.googleLogout(block: GoogleLogoutProps.() -> Unit) = buildWithProperties(block)
-
 fun googleLogout() {
     try {
         // this direct auth2 calls needed to make logout programmatically

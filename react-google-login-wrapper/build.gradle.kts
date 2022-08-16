@@ -8,7 +8,7 @@ repositories {
     mavenCentral()
 }
 
-val wrapper_react_version = "17.0.2-pre.265-kotlin-1.5.31"
+val wrapper_react_version = "18.2.0-pre.369"
 
 
 publishing {

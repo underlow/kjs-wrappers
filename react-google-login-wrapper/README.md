@@ -29,3 +29,14 @@ googleLogin {
     
 ```
 
+# Build
+
+```shell
+build
+
+./gradlew build
+
+publish publish
+
+./gradlew 
+```
