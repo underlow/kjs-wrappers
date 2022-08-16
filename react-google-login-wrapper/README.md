@@ -4,6 +4,12 @@ Wrapper for [React Google Login](https://github.com/anthonyjgrove/react-google-l
 
 Usage example: 
 ```
+add     
+implementation ("com.github.underlow:react-google-login-wrapper-js:version")
+implementation(npm("react-google-login", "version"))
+
+and then
+
 GoogleLogin {
     attrs {
         clientId = "your client id"

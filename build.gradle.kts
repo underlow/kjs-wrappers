@@ -12,6 +12,6 @@ allprojects {
 //    apply plugin: 'net.saliman.properties'
 
     group = "com.github.underlow"
-    version = "0.4"
+    version = "0.5"
 
 }

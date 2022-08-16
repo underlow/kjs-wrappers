@@ -20,6 +20,8 @@ external interface GoogleLoginProps : Props {
     var uxMode: String // popup| redirect
     var render: (GoogleLoginProps) -> ReactElement<Props>
     var onClick: () -> Unit
+    var cookiePolicy: String // ???
+    var accessType: String // Can be either 'online' or 'offline'. Use offline with responseType 'code' to retrieve an authorization code for fetching a refresh token
 }
 
 external interface GoogleLogoutProps : Props {
